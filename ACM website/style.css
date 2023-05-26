@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Andale Mono, monospace;
+}
+.header{
+    display: flex;
+    background-color: #F3D25C;
+    align-items: center;
+}
+.acm-logo{
+    flex-basis: 54%;
+    text-align: end;
+}
+.gator-logo{
+    flex-basis: 46%;
+    text-align: end;
+}
+nav{
+    display: flex;
+    background-color: #747474;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+}
+nav ul {
+    display: flex;
+    gap: 8em; /*ask how to space-around*/
+    list-style-type: none; /*to make no bullet*/
+}
+nav ul li{
+    text-align: center;
+    display: inline-block;
+}
+#menuNav a{
+    text-decoration: none;
+    color:#F3D25C;
+    font-size: large;
+    font-weight: 550;
+}
+.woman-video{
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .woman-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .woman-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.description{
+    background: #F3D25C;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   border-top: solid 4px #636363;
+   border-bottom: solid 4px #636363;
+}
+.description div{
+    width: 100%;
+   height: auto;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   padding-top: 15px;
+   padding-bottom: 15px;
+   background:#636363 ;
+   color: white;
+}
+.description h2{
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+}
+.staff{
+    margin-top: 5%;
+    background-color: white;
+    text-align: center;
+}
+.staff-event-card{
+    margin-top: 7%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    
+    overflow-x: scroll;
+    overflow-y: hidden; /*disable vertical scroll*/
+    white-space: nowrap; /* This property is used to control how text wraps around a container.
+     In this case, we want to disable that wrapping by using nowrap.*/
+}
+
+/*Another method: the flexbox method
+.staff-card-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .card {
+    flex: 0 0 auto;
+  }
+}
+*/
+.card{
+    margin-right: 4rem; /*to space out the cards*/
+    margin-bottom: 3rem; /*to make distance with the scolling bar*/
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    background-color: #d1cec5;
+    border-radius: 10px;
+    display: inline-block; /*make all card displayed in a row*/
+}
+.card img{
+    border-radius: 10px 10px 0 0;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.events-container{
+    text-align: center;
+    background-color: #F3D25C;
+}
+.footer{
+    background-color: #5C5C5C;
+    text-align: start;
+}
